@@ -42,7 +42,7 @@ public class BookController {
         return bookService.getAllBooks();   // Calls the service method to get all books and returns the list
     }
     
-    //fetch the specific book details by book Id using the Get method 
+    //fetch the specific book details by the  book Id using the Get method 
     @RequestMapping(path="/books/{id}",method=RequestMethod.GET)
     public Book getBookById(@PathVariable Long id) {
     	logger.info("Request to fetch book with ID: {}", id);
@@ -68,4 +68,5 @@ public class BookController {
         logger.info("Book deleted successfully with ID: {}", id);
     }
     
+   
 }
